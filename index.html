@@ -1,60 +1,70 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome - Earn Passively</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #ff9966, #ff5e62); /* warm colors */
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-    h1 {
-      margin-top: 20px;
-      font-size: 3em;
-    }
-    .links {
-      margin-top: 30px;
-    }
-    .links a {
-      display: block;
-      margin: 10px 0;
-      font-size: 1.2em;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .datetime {
-      margin-top: 40px;
-      font-size: 1em;
-      opacity: 0.9;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Columns</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff4e6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #d35400;
+        }
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+            min-width: 250px;
+            background: #ffe0b2;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .column h2 {
+            color: #e67e22;
+        }
+        .card {
+            background: #fff;
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+    </style>
 </head>
 <body>
-  <h1>🌞 Welcome to Passive Earning</h1>
-  <div class="links">
-    <a href="#" target="_blank">🐝 Join Honeygain</a>
-    <a href="#" target="_blank">🚶 Join Sweatcoin</a>
-    <a href="#" target="_blank">🧠 Join QuizPanda</a>
-  </div>
-  <div class="datetime" id="datetime"></div>
-
-  <script>
-    function updateDateTime() {
-      const now = new Date();
-      document.getElementById("datetime").textContent = now.toLocaleString();
-    }
-    setInterval(updateDateTime, 1000);
-    updateDateTime();
-  </script>
+    <h1>News Dashboard</h1>
+    <div class="columns">
+        <div class="column">
+            <h2>Sports</h2>
+            <div class="card">🏏 Cricket: India vs Australia live updates</div>
+            <div class="card">⚽ Football: UEFA Champions League scores</div>
+        </div>
+        <div class="column">
+            <h2>Stock Market</h2>
+            <div class="card">📈 Sensex surges 300 points in early trade</div>
+            <div class="card">💹 Top gainers today: Reliance, Infosys</div>
+        </div>
+        <div class="column">
+            <h2>Other News</h2>
+            <div class="card">📰 Weather: Monsoon hits Kerala coast</div>
+            <div class="card">🎬 Entertainment: New Bollywood trailer drops</div>
+        </div>
+    </div>
 </body>
 </html>
