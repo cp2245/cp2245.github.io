@@ -24,10 +24,14 @@
 
   <div class="content">
     <h2>📰 Latest News</h2>
-    <div id="news-feed">Loading news...</div>
+    <div id="news-feed">Loading latest news...</div>
+
+    <h2>💻 Tech News</h2>
+    <div id="tech-feed">Loading tech news...</div>
   </div>
 
   <script>
+    // General News (BBC)
     fetch("https://api.rss2json.com/v1/api.json?rss_url=https://feeds.bbci.co.uk/news/rss.xml")
       .then(response => response.json())
       .then(data => {
@@ -40,7 +44,21 @@
       })
       .catch(error => {
         document.getElementById("news-feed").innerHTML = "Failed to load news.";
-        console.error(error);
+      });
+
+    // Tech News (The Verge)
+    fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.theverge.com/rss/index.xml")
+      .then(response => response.json())
+      .then(data => {
+        let output = "<ul>";
+        data.items.slice(0, 5).forEach(item => {
+          output += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
+        });
+        output += "</ul>";
+        document.getElementById("tech-feed").innerHTML = output;
+      })
+      .catch(error => {
+        document.getElementById("tech-feed").innerHTML = "Failed to load tech news.";
       });
   </script>
 </body>
