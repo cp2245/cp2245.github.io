@@ -1,47 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>InfoWorld - Earn Online</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earn & Refer</title>
   <style>
     body {
+      background-color: #ffecd2; /* warm background */
+      color: #000;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff4e6; /* warm peach background */
-      color: #3e2723; /* warm dark text */
+      margin: 20px;
     }
-    nav {
-      background: #ff7043; /* warm orange */
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #ffffff;
-      margin: 0 15px;
-      text-decoration: none;
+
+    .title {
+      font-size: 40px;
       font-weight: bold;
+      color: #d1005d; /* bold pink */
+      margin-top: 30px;
     }
-    .content {
-      padding: 20px;
+
+    .link {
+      font-size: 20px;
+      margin-bottom: 15px;
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 10px;
+      background-color: #fff0f5;
+      border-radius: 8px;
     }
-    h1 {
-      color: #bf360c;
+
+    .datetime {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
     }
   </style>
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const datetime = now.toLocaleString();
+      document.getElementById('datetime').textContent = datetime;
+    }
+
+    setInterval(updateDateTime, 1000);
+    window.onload = updateDateTime;
+  </script>
 </head>
 <body>
-  <nav>
-    <a href="index.html">🏠 Home</a> |
-    <a href="blog.html">📝 Blog</a> |
-    <a href="news.html">📰 News</a> |
-    <a href="earn.html">💰 Earn</a> |
-    <a href="refer.html">🎁 Refer & Earn</a>
-  </nav>
+  <div class="datetime" id="datetime"></div>
 
-  <div class="content">
-    <h1>💰 Earn Online</h1>
-    <p>Explore ways to earn online with apps, referrals, and passive income tools.</p>
-  </div>
+  <div class="title">Earn</div>
+  <a href="https://r.honeygain.me/MOHITFEF3" class="link" target="_blank">🐝 Honeygain – Earn by sharing internet</a>
+  <a href="https://sweatco.in/i/mohitpatil379161" class="link" target="_blank">🚶 Sweatcoin – Get paid to walk</a>
+  <a href="https://quizpanda.in/" class="link" target="_blank">🧠 QuizPanda – Win by playing quizzes</a>
+
+  <div class="title">Refer & Earn</div>
+  <a href="refer.html" class="link">🔗 Go to Refer Page</a>
+  <a href="index.html" class="link">🏠 Back to Home</a>
 </body>
 </html>
