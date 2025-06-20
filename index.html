@@ -1,217 +1,76 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="google-adsense-account" content="ca-pub-9443050055436933">
-  <meta charset="UTF-8">
-  <title>InfoWorld - Home</title> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9443050055436933"
-     crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
-      margin: 0;
-      padding: 0;
-      color: #2c3e50;
-    }
-    header {
-      background: none;
-      color: #3498db;
-      text-align: center;
-      padding: 30px 15px 10px;
-      font-size: 28px;
-      font-weight: 600;
-    }
-    #datetime {
-      text-align: center;
-      font-size: 16px;
-      margin-top: -10px;
-      color: #444;
-    }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 30px 10px;
-      gap: 20px;
-    }
-    .card {
-      background: #ffe7c1;
-      color: #333;
-      border-radius: 14px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 220px;
-      height: 150px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 500;
-      transition: transform 0.3s ease;
-      text-align: center;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      background: #ffd69a;
-    }
-    .card span {
-      font-size: 32px;
-      margin-bottom: 5px;
-    }
-  </style>
-
-<style>
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s ease-out forwards;
-  }
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .top-bar {
-    text-align: center;
-    background: #3498db;
-    color: white;
-    padding: 8px 10px;
-    font-size: 15px;
-    font-weight: 500;
-  }
-  .quick-links {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-  }
-  .quick-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #3498db;
-  }
-  .scroll-top {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #3498db;
-    color: white;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    font-size: 24px;
-    line-height: 40px;
-    cursor: pointer;
-    display: none;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-  }
-</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to InfoWorld 🌎</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e7f0fa;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            background-color: #d0e8ff;
+            padding: 15px;
+            font-size: 1.8em;
+            color: #005f99;
+            font-weight: bold;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .box {
+            flex: 1 1 200px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .box a {
+            text-decoration: none;
+            color: #ff6600;
+            font-weight: bold;
+        }
+        .weather {
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.85em;
+            color: #666;
+        }
+    </style>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9443050055436933" crossorigin="anonymous"></script>
 </head>
-
 <body>
+    <header>Welcome to InfoWorld 🌎</header>
+    <div style="text-align:center; font-size: 1.1em; margin-top: 10px;" id="datetime"></div>
 
-<div class="top-bar fade-in">📰 Your one-stop hub for News, Blogs & Earnings</div>
-<header class="fade-in">Welcome to InfoWorld 🌎</header>
-<div id="datetime">Loading date & time...</div>
+    <div class="container">
+        <div class="box"><a href="news.html">📰 Go to News</a></div>
+        <div class="box"><a href="blog.html">✍️ Go to Blog</a></div>
+        <div class="box"><a href="refer.html">💰 Go to Refer & Earn</a></div>
+        <div class="box"><a href="weather.html">☀️ Go to Weather</a></div>
+    </div>
 
-<div class="quick-links fade-in">Quick Links: <a href="index.html">Home</a> | <a href="news.html">News</a> | <a href="blog.html">Blog</a> | <a href="refer.html">Refer & Earn</a> | <a href="weather.html">Weather</a>
-</div>
-<div class="grid fade-in">
-  <a href="useful.html" class="card"><span>🔗</span>Go to Useful Links</a>
+    <footer>🌍 Powered by InfoWorld | © 2025</footer>
 
-  <a href="news.html" class="card"><span>📰</span>Go to News</a>
-  <a href="blog.html" class="card"><span>📝</span>Go to Blog</a>
-  <a href="weather.html" class="card"><span>🌦️</span>Go to Weather</a>
-  <a href="refer.html" class="card"><span>🎁</span>Go to Refer & Earn</a>
-</div>
-
-<script>
-  function updateDateTime() {
-    const now = new Date();
-    const options = {
-      weekday: 'long', year: 'numeric', month: 'short',
-      day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'
-    };
-    document.getElementById("datetime").innerHTML = now.toLocaleDateString('en-IN', options);
-  }
-  setInterval(updateDateTime, 1000);
-  updateDateTime();
-</script>
-
-
-<!-- Weather Auto Box -->
-<div style="text-align:center; margin-top: 30px;">
-  <div id="weather" style="
-    display: inline-block;
-    background: #e3f2fd;
-    color: #2c3e50;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    font-size: 16px;
-    max-width: 300px;
-  ">🌦️ Detecting weather...</div>
-</div>
-
-<script>
-  function fetchWeather(lat, lon) {
-    const key = "3fda16ae2ee32b5317a622b127c3a78f";
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`)
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("weather").innerHTML = `
-          📍 <strong>${data.name}</strong><br>
-          ${data.weather[0].description}, 🌡️ ${data.main.temp}°C
-        `;
-      })
-      .catch(() => {
-        document.getElementById("weather").innerText = "Weather unavailable.";
-      });
-  }
-
-  function detectWeatherLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        pos => fetchWeather(pos.coords.latitude, pos.coords.longitude),
-        () => document.getElementById("weather").innerText = "Location access denied."
-      );
-    } else {
-      document.getElementById("weather").innerText = "Geolocation not supported.";
-    }
-  }
-
-  detectWeatherLocation();
-</script>
-
-
-<!-- Globe Logo Section -->
-<div style="text-align: center; margin-top: 40px;">
-  <img src="https://cdn-icons-png.flaticon.com/512/3909/3909444.png" alt="Globe Logo" style="width: 100px; opacity: 0.8;">
-</div>
-
-<!-- Footer -->
-<footer style="margin-top: 40px; padding: 20px; background: #f0f0f0; text-align: center; font-size: 14px; color: #555;">
-  © 2025 InfoWorld | Built with ❤️ for News, Blogs, and Smart Referrals<br>
-  Contact: infoworld@support.com
-</footer>
-
-<!-- Scroll to top button -->
-<div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</div>
-
-<script>
-  window.onscroll = function() {
-    const scrollBtn = document.querySelector(".scroll-top");
-    if (window.scrollY > 200) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
-  };
-</script>
+    <script>
+        const dtElem = document.getElementById("datetime");
+        const now = new Date();
+        dtElem.innerText = "📅 " + now.toDateString() + " ⏰ " + now.toLocaleTimeString();
+    </script>
 </body>
-
-
 </html>
