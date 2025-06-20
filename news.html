@@ -2,84 +2,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>News - InfoWorld</title>
+  <meta charset="UTF-8">
+  <title>Live News - InfoWorld</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      background: #fff8ec;
       font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f8ff;
       margin: 0;
-      padding: 20px;
-      color: #333;
+      padding: 0;
     }
-    h1 {
+    header {
+      background-color: #3498db;
+      color: white;
+      padding: 20px;
       text-align: center;
-      color: #d35400;
+      font-size: 24px;
+    }
+    .container {
+      padding: 20px;
+    }
+    .news-section {
       margin-bottom: 30px;
     }
-    .section {
-      margin-bottom: 40px;
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-    .section h2 {
-      color: #e67e22;
-      border-bottom: 2px solid #f39c12;
-      padding-bottom: 6px;
+    .news-section h2 {
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
       margin-bottom: 15px;
     }
     .news-item {
-      margin-bottom: 12px;
+      background: white;
+      margin: 10px 0;
+      padding: 15px;
+      border-left: 5px solid #3498db;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 6px;
     }
-    .news-item strong {
-      color: #c0392b;
+    .news-item a {
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .date {
-      font-size: 12px;
-      color: #888;
+    .news-item a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>📰 InfoWorld - Daily News</h1>
 
-  <div class="section">
-    <h2>💻 Technical News</h2>
-    <div class="news-item"><strong>OpenAI launches GPT-5</strong><br><span class="date">June 2025</span><br>New capabilities in reasoning and code understanding.</div>
-    <div class="news-item"><strong>Quantum computers now in labs</strong><br><span class="date">June 2025</span><br>Breakthrough tech tested in real-time applications.</div>
-  </div>
+<header>📰 Live News - InfoWorld</header>
 
-  <div class="section">
-    <h2>📈 Stock Market</h2>
-    <div class="news-item"><strong>NIFTY hits 20,000+</strong><br><span class="date">June 2025</span><br>Investors optimistic after earnings season begins.</div>
-    <div class="news-item"><strong>ITC declares dividend</strong><br><span class="date">June 2025</span><br>Strong Q4 results push share prices up 3%.</div>
+<div class="container">
+  <div class="news-section">
+    <h2>Latest Headlines (India)</h2>
+    <div id="news-list"></div>
   </div>
+</div>
 
-  <div class="section">
-    <h2>🏏 Sports News</h2>
-    <div class="news-item"><strong>India wins T20 series vs Australia</strong><br><span class="date">June 2025</span><br>3-2 victory celebrated across the country.</div>
-    <div class="news-item"><strong>Olympics 2028 prep begins</strong><br><span class="date">June 2025</span><br>Indian athletes enter international camps.</div>
-  </div>
+<script>
+  async function fetchNews() {
+    try {
+      const res = await fetch("https://newsapi.org/v2/top-headlines?country=in&pageSize=10&apiKey=714725941573450e8ba446d6bc0de138");
+      const data = await res.json();
+      const newsList = document.getElementById("news-list");
+      newsList.innerHTML = "";
 
-  <div class="section">
-    <h2>💪 Fitness</h2>
-    <div class="news-item"><strong>Step Challenge apps trending</strong><br><span class="date">June 2025</span><br>Sweatcoin & WinWalk reward daily steps.</div>
-    <div class="news-item"><strong>Yoga Day celebrated globally</strong><br><span class="date">June 2025</span><br>Millions joined the 30-min morning stretch.</div>
-  </div>
+      if (data.articles) {
+        data.articles.forEach(article => {
+          const div = document.createElement("div");
+          div.className = "news-item";
+          div.innerHTML = `
+            <a href="${article.url}" target="_blank">${article.title}</a>
+            <p>${article.description || ""}</p>
+          `;
+          newsList.appendChild(div);
+        });
+      } else {
+        newsList.innerHTML = "<p>No news found.</p>";
+      }
+    } catch (err) {
+      console.error(err);
+      document.getElementById("news-list").innerHTML = "<p>Error loading news.</p>";
+    }
+  }
 
-  <div class="section">
-    <h2>🇮🇳 India</h2>
-    <div class="news-item"><strong>Monsoon hits Kerala coast</strong><br><span class="date">June 2025</span><br>Timely rainfall expected to help crops and reduce heat.</div>
-    <div class="news-item"><strong>Digital India 3.0 launched</strong><br><span class="date">June 2025</span><br>PM announces expansion of digital infrastructure.</div>
-  </div>
+  fetchNews();
+</script>
 
-  <div class="section">
-    <h2>🧾 Exam News</h2>
-    <div class="news-item"><strong>UPSC 2025 Prelims schedule released</strong><br><span class="date">June 2025</span><br>Official calendar uploaded on upsc.gov.in.</div>
-    <div class="news-item"><strong>MPSC Group C: New pattern from this year</strong><br><span class="date">June 2025</span><br>Paper-1 now common for all posts.</div>
-  </div>
 </body>
 </html>
