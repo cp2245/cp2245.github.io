@@ -1,83 +1,111 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>InfoWorld - Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - InfoWorld</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
-
     body {
-      font-family: 'Roboto Slab', serif;
+      background: #fffaf1;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #fff8e1;
-      color: #4e342e;
+      padding: 20px;
+      color: #333;
     }
-    nav {
-      background: #ff6f00;
-      padding: 10px;
+    h1 {
       text-align: center;
+      color: #d35400;
+      margin-bottom: 40px;
     }
-    nav a {
-      color: #ffffff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
-    .content {
+    .column {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       padding: 20px;
     }
-    h1, h2 {
-      color: #e65100;
+    .column h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #f39c12;
+      padding-bottom: 5px;
     }
-    .date {
-      font-size: 0.9em;
-      color: #6d4c41;
-      margin-bottom: 20px;
+    .post {
+      margin-bottom: 15px;
     }
-    p {
-      line-height: 1.6;
+    .post-title {
+      font-weight: bold;
+      color: #d35400;
     }
-    .back-link {
-      margin-top: 30px;
+    .post-meta {
+      font-size: 12px;
+      color: #777;
     }
-    .back-link a {
-      background: #ff6f00;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 15px 0;
-      border-radius: 8px;
+    .post-desc {
+      font-size: 14px;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">🏠 Home</a> |
-    <a href="blog.html">📝 Blog</a> |
-    <a href="news.html">📰 News</a> |
-    <a href="earn.html">💰 Earn</a> |
-    <a href="refer.html">🎁 Refer & Earn</a>
-  </nav>
-
-  <div class="content">
-    <h1>📝 InfoWorld Blog</h1>
-
-    <h2>Why Exercise is the Best Medicine</h2>
-    <div class="date">Posted on: 18 June 2025</div>
-    <img src="https://images.unsplash.com/photo-1594737625785-c0a0dfbb4007?fit=crop&w=1200&q=80" alt="Exercise Image">
-    <p>Regular physical activity isn't just about building muscles or losing weight. Exercise improves your mood, boosts energy, and strengthens your heart.</p>
-    <p>Studies show that even 30 minutes of moderate activity a day can reduce the risk of chronic diseases like diabetes, hypertension, and depression.</p>
-    <p>From walking and yoga to cycling and dancing — find what you enjoy, and stick with it. The key is consistency, not intensity.</p>
-    <p>Exercise is free, powerful, and life-changing. Whether you're 16 or 60, it's never too early — or too late — to start moving!</p>
-
-    <div class="back-link">
-      <a href="index.html">← Back to Home</a>
+  <h1>📰 InfoWorld Blog</h1>
+  <div class="grid">
+    <div class="column">
+      <h2>🧠 Tech</h2>
+      <div class="post">
+        <div class="post-title">Latest in AI</div>
+        <div class="post-meta">by Mohit • June 2025</div>
+        <div class="post-desc">Discover how AI is changing our lives in 2025.</div>
+      </div>
+      <div class="post">
+        <div class="post-title">5G vs 6G</div>
+        <div class="post-meta">by Team InfoWorld • June 2025</div>
+        <div class="post-desc">Explore the future of ultra-fast internet.</div>
+      </div>
+    </div>
+    <div class="column">
+      <h2>🎮 Gaming</h2>
+      <div class="post">
+        <div class="post-title">Top 5 Android Games</div>
+        <div class="post-meta">by Chetan • June 2025</div>
+        <div class="post-desc">Here are the hottest mobile games this month!</div>
+      </div>
+      <div class="post">
+        <div class="post-title">Gaming Laptops under ₹50K</div>
+        <div class="post-meta">by Mohit • June 2025</div>
+        <div class="post-desc">Budget gaming made easy with these laptops.</div>
+      </div>
+    </div>
+    <div class="column">
+      <h2>🏋️ Fitness</h2>
+      <div class="post">
+        <div class="post-title">Walk to Earn</div>
+        <div class="post-meta">by FitGuru • June 2025</div>
+        <div class="post-desc">Get healthy and earn coins with walking apps!</div>
+      </div>
+      <div class="post">
+        <div class="post-title">5-Minute Daily Workout</div>
+        <div class="post-meta">by Mohit • June 2025</div>
+        <div class="post-desc">Simple workouts you can do at home anytime.</div>
+      </div>
+    </div>
+    <div class="column">
+      <h2>🧾 Exams</h2>
+      <div class="post">
+        <div class="post-title">UPSC 2025 Calendar</div>
+        <div class="post-meta">by ExamDesk • June 2025</div>
+        <div class="post-desc">Key dates and changes for UPSC aspirants.</div>
+      </div>
+      <div class="post">
+        <div class="post-title">MPSC Group C Update</div>
+        <div class="post-meta">by InfoWorld • June 2025</div>
+        <div class="post-desc">New pattern, new syllabus – check details here.</div>
+      </div>
     </div>
   </div>
 </body>
