@@ -143,5 +143,49 @@
   <div class="logo-footer">🌍</div>
 </footer>
 
+
+<!-- Weather Forecast Column -->
+<div class="section" style="background: white; padding: 15px; border-radius: 10px; box-shadow: 0 1px 5px rgba(0,0,0,0.1); margin-top: 20px;">
+  <h2 style="font-size: 18px; color: #3498db;">🌤️ Weather Forecast</h2>
+  <div id="forecast">Fetching forecast...</div>
+</div>
+
+<script>
+  function fetchForecast(lat, lon) {
+    const key = "3fda16ae2ee32b5317a622b127c3a78f";
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=metric`)
+      .then(res => res.json())
+      .then(data => {
+        const forecastDiv = document.getElementById("forecast");
+        let html = '';
+        for (let i = 0; i < 5; i += 2) {{
+          const item = data.list[i];
+          const date = new Date(item.dt_txt).toLocaleString('en-IN', { weekday: 'short', hour: '2-digit', minute: '2-digit' });
+          html += `
+            <div style="margin-bottom: 8px;">
+              <strong>${date}</strong>: ${item.weather[0].main}, 🌡️ ${item.main.temp}°C
+            </div>`;
+        }}
+        forecastDiv.innerHTML = html;
+      })
+      .catch(() => {
+        document.getElementById("forecast").innerText = "Forecast unavailable.";
+      });
+  }
+
+  function detectForecastLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        pos => fetchForecast(pos.coords.latitude, pos.coords.longitude),
+        () => document.getElementById("forecast").innerText = "Location blocked."
+      );
+    } else {
+      document.getElementById("forecast").innerText = "Geolocation not supported.";
+    }
+  }
+
+  detectForecastLocation();
+</script>
+
 </body>
 </html>
