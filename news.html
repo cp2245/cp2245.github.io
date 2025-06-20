@@ -4,102 +4,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>InfoWorld - Full News Portal</title>
+  <title>News - InfoWorld</title>
   <style>
     body {
+      background: #fff8ec;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f8ff;
       margin: 0;
       padding: 20px;
+      color: #333;
     }
     h1 {
       text-align: center;
-      color: #003366;
+      color: #d35400;
+      margin-bottom: 30px;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
+    .section {
+      margin-bottom: 40px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
-    .news-card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+    .section h2 {
+      color: #e67e22;
+      border-bottom: 2px solid #f39c12;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
     }
-    .news-card h2 {
-      background: #003366;
-      color: white;
-      margin: 0;
-      padding: 10px;
-      font-size: 18px;
+    .news-item {
+      margin-bottom: 12px;
     }
-    iframe {
-      border: none;
-      width: 100%;
-      height: 400px;
+    .news-item strong {
+      color: #c0392b;
     }
-    a.back {
-      display: block;
-      margin-top: 30px;
-      text-align: center;
-      font-size: 18px;
-      color: #003366;
-      text-decoration: none;
+    .date {
+      font-size: 12px;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <h1>📰 InfoWorld - Full News Portal</h1>
-  <div class="grid">
-    <div class="news-card">
-      <h2>🧪 Technology</h2>
-      <iframe src="https://rss.app/embed/v1/magazine/0q6NQXdbXZtSsdWh"></iframe>
-    </div>
-    <div class="news-card">
-      <h2>📈 Stock Market</h2>
-      <iframe src="https://rss.app/embed/v1/magazine/umr3t2Ng15ePrtwG"></iframe>
-    </div>
-    <div class="news-card">
-      <h2>🏏 Sports</h2>
-      <iframe src="https://rss.app/embed/v1/magazine/kVrQjZYBAZpqXYmX"></iframe>
-    </div>
-    <div class="news-card">
-      <h2>💪 Fitness</h2>
-      <iframe src="https://rss.app/embed/v1/magazine/ONrL64q4tHv04pkz"></iframe>
-    </div>
-    <div class="news-card">
-      <h2>🇮🇳 India</h2>
-      <iframe src="https://rss.app/embed/v1/magazine/yHQmMJZfs8lI0eMS"></iframe>
-    </div>
-    <div class="news-card">
-      <h2>📝 Exam News</h2>
-      <iframe src="https://rss.app/embed/v1/magazine/iPgKCrIbFGlg9vQO"></iframe>
-    </div>
-    <div class="news-card">
-      <h2>🏡 Buldhana</h2>
-      <iframe src="https://rss.app/embed/v1/magazine/zkpCu1xNbg2UYFRS"></iframe>
-    </div>
-    <div class="news-card">
-      <h2>💼 Jobs & Govt Exams</h2>
-      <iframe src="https://rss.app/embed/v1/magazine/dj1ZhKmfXPGKzMIw"></iframe>
-    </div>
-    <div class="news-card">
-      <h2>🎥 Entertainment</h2>
-      <iframe src="https://rss.app/embed/v1/magazine/nIPZykcWLs0RxDci"></iframe>
-    </div>
-    <div class="news-card">
-      <h2>🌍 World News</h2>
-      <iframe src="https://rss.app/embed/v1/magazine/sLfStBIiEqfDcE6H"></iframe>
-    </div>
-    <div class="news-card">
-      <h2>💡 Education</h2>
-      <iframe src="https://rss.app/embed/v1/magazine/kRyW1CrvZgfccMX0"></iframe>
-    </div>
+  <h1>📰 InfoWorld - Daily News</h1>
+
+  <div class="section">
+    <h2>💻 Technical News</h2>
+    <div class="news-item"><strong>OpenAI launches GPT-5</strong><br><span class="date">June 2025</span><br>New capabilities in reasoning and code understanding.</div>
+    <div class="news-item"><strong>Quantum computers now in labs</strong><br><span class="date">June 2025</span><br>Breakthrough tech tested in real-time applications.</div>
   </div>
-  <a class="back" href="index.html">← Back to Home</a>
+
+  <div class="section">
+    <h2>📈 Stock Market</h2>
+    <div class="news-item"><strong>NIFTY hits 20,000+</strong><br><span class="date">June 2025</span><br>Investors optimistic after earnings season begins.</div>
+    <div class="news-item"><strong>ITC declares dividend</strong><br><span class="date">June 2025</span><br>Strong Q4 results push share prices up 3%.</div>
+  </div>
+
+  <div class="section">
+    <h2>🏏 Sports News</h2>
+    <div class="news-item"><strong>India wins T20 series vs Australia</strong><br><span class="date">June 2025</span><br>3-2 victory celebrated across the country.</div>
+    <div class="news-item"><strong>Olympics 2028 prep begins</strong><br><span class="date">June 2025</span><br>Indian athletes enter international camps.</div>
+  </div>
+
+  <div class="section">
+    <h2>💪 Fitness</h2>
+    <div class="news-item"><strong>Step Challenge apps trending</strong><br><span class="date">June 2025</span><br>Sweatcoin & WinWalk reward daily steps.</div>
+    <div class="news-item"><strong>Yoga Day celebrated globally</strong><br><span class="date">June 2025</span><br>Millions joined the 30-min morning stretch.</div>
+  </div>
+
+  <div class="section">
+    <h2>🇮🇳 India</h2>
+    <div class="news-item"><strong>Monsoon hits Kerala coast</strong><br><span class="date">June 2025</span><br>Timely rainfall expected to help crops and reduce heat.</div>
+    <div class="news-item"><strong>Digital India 3.0 launched</strong><br><span class="date">June 2025</span><br>PM announces expansion of digital infrastructure.</div>
+  </div>
+
+  <div class="section">
+    <h2>🧾 Exam News</h2>
+    <div class="news-item"><strong>UPSC 2025 Prelims schedule released</strong><br><span class="date">June 2025</span><br>Official calendar uploaded on upsc.gov.in.</div>
+    <div class="news-item"><strong>MPSC Group C: New pattern from this year</strong><br><span class="date">June 2025</span><br>Paper-1 now common for all posts.</div>
+  </div>
 </body>
 </html>
