@@ -2,92 +2,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Live News - InfoWorld</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News - InfoWorld</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f8ff;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #3498db;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
-    }
-    .container {
-      padding: 20px;
-    }
-    .news-section {
-      margin-bottom: 30px;
-    }
-    .news-section h2 {
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-    }
-    .news-item {
-      background: white;
-      margin: 10px 0;
+    body { font-family: Arial, sans-serif; background: #ffffff; padding: 20px; }
+    h1 { color: #2e7d32; }
+    .news-card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       padding: 15px;
-      border-left: 5px solid #3498db;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      border-radius: 6px;
+      margin-bottom: 20px;
     }
-    .news-item a {
-      color: #2c3e50;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .news-item a:hover {
-      text-decoration: underline;
-    }
+    h2 { color: #388e3c; margin-bottom: 10px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
   </style>
 </head>
 <body>
+  <h1>📰 Latest News</h1>
 
-<header>📰 Live News - InfoWorld</header>
-
-<div class="container">
-  <div class="news-section">
-    <h2>Latest Headlines (India)</h2>
-    <div id="news-list"></div>
+  <div class="news-card">
+    <h2>NEET UG 2025 Registration Begins</h2>
+    <ul>
+      <li>Application open on neet.nta.nic.in</li>
+      <li>Deadline: August 15, 2025</li>
+      <li>Admit card in April 2025</li>
+      <li>Exam scheduled for May 2025</li>
+      <li>Single window counseling announced</li>
+    </ul>
   </div>
-</div>
 
-<script>
-  async function fetchNews() {
-    try {
-      const res = await fetch("https://newsapi.org/v2/top-headlines?country=in&pageSize=10&apiKey=714725941573450e8ba446d6bc0de138");
-      const data = await res.json();
-      const newsList = document.getElementById("news-list");
-      newsList.innerHTML = "";
-
-      if (data.articles) {
-        data.articles.forEach(article => {
-          const div = document.createElement("div");
-          div.className = "news-item";
-          div.innerHTML = `
-            <a href="${article.url}" target="_blank">${article.title}</a>
-            <p>${article.description || ""}</p>
-          `;
-          newsList.appendChild(div);
-        });
-      } else {
-        newsList.innerHTML = "<p>No news found.</p>";
-      }
-    } catch (err) {
-      console.error(err);
-      document.getElementById("news-list").innerHTML = "<p>Error loading news.</p>";
-    }
-  }
-
-  fetchNews();
-</script>
-
+  <div class="news-card">
+    <h2>Monsoon Alert for Maharashtra ☔</h2>
+    <ul>
+      <li>Heavy rainfall expected in Konkan & Mumbai</li>
+      <li>IMD issues yellow alert for next 3 days</li>
+      <li>Schools closed in Mumbai on June 25</li>
+      <li>Train services running slow</li>
+      <li>Helplines activated by BMC</li>
+    </ul>
+  </div>
 </body>
 </html>
