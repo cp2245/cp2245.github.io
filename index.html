@@ -1,76 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to InfoWorld 🌎</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #e7f0fa;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-        header {
-            text-align: center;
-            background-color: #d0e8ff;
-            padding: 15px;
-            font-size: 1.8em;
-            color: #005f99;
-            font-weight: bold;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        .box {
-            flex: 1 1 200px;
-            background: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .box a {
-            text-decoration: none;
-            color: #ff6600;
-            font-weight: bold;
-        }
-        .weather {
-            font-size: 0.9em;
-            margin-top: 10px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 0.85em;
-            color: #666;
-        }
-    </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9443050055436933" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InfoWorld</title>
+  <style>
+    body {
+      background-color: #dbeeff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      background-color: #a8d4ff;
+      padding: 20px;
+      margin: 0;
+      color: #004080;
+    }
+    .datetime {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    .button {
+      background-color: white;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin: 10px;
+      display: block;
+      width: 80%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      color: orange;
+      border: 2px solid orange;
+    }
+    .footer {
+      background-color: #0e0e0e;
+      color: white;
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+    .footer .section {
+      margin-bottom: 20px;
+    }
+    .footer h3 {
+      margin-top: 0;
+    }
+    .footer a {
+      color: #80dfff;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+    }
+    .footer .socials i {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+    .footer-bottom {
+      font-size: 14px;
+      color: #aaa;
+      border-top: 1px solid #444;
+      padding-top: 10px;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function updateTime() {
+      const now = new Date();
+      document.getElementById("datetime").innerText =
+        now.toDateString() + " 🕒 " + now.toLocaleTimeString();
+    }
+    setInterval(updateTime, 1000);
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <header>Welcome to InfoWorld 🌎</header>
-    <div style="text-align:center; font-size: 1.1em; margin-top: 10px;" id="datetime"></div>
+<body onload="updateTime()">
 
-    <div class="container">
-        <div class="box"><a href="news.html">📰 Go to News</a></div>
-        <div class="box"><a href="blog.html">✍️ Go to Blog</a></div>
-        <div class="box"><a href="refer.html">💰 Go to Refer & Earn</a></div>
-        <div class="box"><a href="weather.html">☀️ Go to Weather</a></div>
+  <h1>🌍 Welcome to InfoWorld</h1>
+
+  <div class="datetime" id="datetime">Loading date and time...</div>
+
+  <a href="news.html" class="button">📰 Go to News</a>
+  <a href="blog.html" class="button">✍️ Go to Blog</a>
+  <a href="refer.html" class="button">💰 Go to Refer & Earn</a>
+  <a href="weather.html" class="button">🌞 Go to Weather</a>
+  <a href="you.html" class="button">👤 You</a>
+  <a href="apps.html" class="button">📱 Other Apps</a>
+
+  <p style="margin-top: 30px; color: gray;">🌍 Powered by InfoWorld | © 2025</p>
+
+  <!-- Footer Start -->
+  <div class="footer">
+    <div class="section">
+      <h3>About InfoWorld</h3>
+      <p>InfoWorld provides apps, updates & info to help you stay informed and earn online easily.</p>
     </div>
 
-    <footer>🌍 Powered by InfoWorld | © 2025</footer>
+    <div class="section">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="blog.html">Blog</a>
+      <a href="refer.html">Refer & Earn</a>
+      <a href="weather.html">Weather</a>
+      <a href="you.html">You</a>
+      <a href="apps.html">Other Apps</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-    <script>
-        const dtElem = document.getElementById("datetime");
-        const now = new Date();
-        dtElem.innerText = "📅 " + now.toDateString() + " ⏰ " + now.toLocaleTimeString();
-    </script>
+    <div class="section">
+      <h3>Contact Info</h3>
+      <p>📍 India</p>
+      <p>📞 +91 9876543210</p>
+      <p>✉️ infoworld@email.com</p>
+    </div>
+
+    <div class="section socials">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 InfoWorld. All rights reserved. | AdSense-compliant | Built with ❤️
+    </div>
+  </div>
+  <!-- Footer End -->
+
 </body>
 </html>
