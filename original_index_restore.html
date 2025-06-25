@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InfoWorld</title>
+  <style>
+    body {
+      background-color: #dbeeff;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      background-color: #a8d4ff;
+      padding: 20px;
+      margin: 0;
+    }
+    .datetime {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    .button {
+      background-color: white;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin: 10px;
+      display: block;
+      width: 80%;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      color: orange;
+      border: 2px solid orange;
+    }
+    .footer {
+      background-color: #0e0e0e;
+      color: white;
+      padding: 40px 20px;
+      margin-top: 40px;
+    }
+    .footer .section {
+      margin-bottom: 20px;
+    }
+    .footer h3 {
+      margin-top: 0;
+    }
+    .footer a {
+      color: #80dfff;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+    }
+    .footer .socials i {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+    }
+    .footer-bottom {
+      font-size: 14px;
+      color: #aaa;
+      border-top: 1px solid #444;
+      padding-top: 10px;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function updateTime() {
+      const now = new Date();
+      document.getElementById("datetime").innerText =
+        now.toDateString() + " 🕒 " + now.toLocaleTimeString();
+    }
+    setInterval(updateTime, 1000);
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body onload="updateTime()">
+
+  <h1>🌍 Welcome to InfoWorld</h1>
+
+  <div class="datetime" id="datetime">Loading date and time...</div>
+
+  <a href="news.html" class="button">📰 Go to News</a>
+  <a href="blog.html" class="button">✍️ Go to Blog</a>
+  <a href="refer.html" class="button">💰 Go to Refer & Earn</a>
+  <a href="weather.html" class="button">🌞 Go to Weather</a>
+
+  <p style="margin-top: 30px; color: gray;">🌍 Powered by InfoWorld | © 2025</p>
+
+  <!-- Footer Start -->
+  <div class="footer">
+    <div class="section">
+      <h3>About InfoWorld</h3>
+      <p>InfoWorld provides tools, apps, and info to help users stay updated and earn online safely.</p>
+    </div>
+
+    <div class="section">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="blog.html">Blog</a>
+      <a href="refer.html">Refer & Earn</a>
+      <a href="weather.html">Weather</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="section">
+      <h3>Contact Info</h3>
+      <p>📍 Your City, India</p>
+      <p>📞 +91 9876543210</p>
+      <p>✉️ infoworld@email.com</p>
+    </div>
+
+    <div class="section socials">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 InfoWorld. All rights reserved. | AdSense compliant | Built with ❤️
+    </div>
+  </div>
+  <!-- Footer End -->
+
+</body>
+</html>
