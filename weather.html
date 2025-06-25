@@ -3,57 +3,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Weather - InfoWorld</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fffdf5;
-      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: #e0f7fa;
+      color: #333;
       margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px 10px;
     }
     h1 {
-      text-align: center;
-      color: #e65100;
-      background: #fff3e0;
-      padding: 15px;
-      border-radius: 10px;
+      font-size: 32px;
+      color: #00796b;
     }
-    .weather-box {
-      background: #ffffff;
-      border-left: 6px solid #ff9800;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      max-width: 800px;
+    .weather-container {
+      background: white;
       margin: 20px auto;
+      padding: 30px;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .weather-card {
+      background: #f0f8ff;
+      border-left: 4px solid #00796b;
       padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    h2 {
-      color: #ef6c00;
-    }
-    p {
-      color: #e65100;
-      font-size: 1.05em;
-      line-height: 1.5;
+    .city {
+      font-size: 20px;
+      font-weight: bold;
+      color: #00796b;
+      margin-bottom: 8px;
     }
   </style>
 </head>
 <body>
-  <h1>🌤️ State-wise Weather Report - India</h1>
-
-  <div class="weather-box"><h2>📍 Maharashtra</h2><p>🌦️ Partly cloudy with rain | 🌡️ 29°C/24°C | 💧 82% Humidity | 💨 12 km/h SW</p></div>
-  <div class="weather-box"><h2>📍 Gujarat</h2><p>☀️ Sunny | 🌡️ 36°C/28°C | 💧 45% Humidity | 💨 18 km/h NW</p></div>
-  <div class="weather-box"><h2>📍 Karnataka</h2><p>🌧️ Showers expected | 🌡️ 27°C/22°C | 💧 88% Humidity | 💨 15 km/h S</p></div>
-  <div class="weather-box"><h2>📍 Delhi</h2><p>⛅ Cloudy skies | 🌡️ 35°C/26°C | 💧 60% Humidity | 💨 20 km/h NE</p></div>
-  <div class="weather-box"><h2>📍 West Bengal</h2><p>🌦️ Intermittent rain | 🌡️ 32°C/25°C | 💧 79% Humidity | 💨 10 km/h SE</p></div>
-  <div class="weather-box"><h2>📍 Rajasthan</h2><p>🔥 Hot and dry | 🌡️ 41°C/30°C | 💧 20% Humidity | 💨 22 km/h NW</p></div>
-  <div class="weather-box"><h2>📍 Tamil Nadu</h2><p>🌤️ Humid with light breeze | 🌡️ 34°C/27°C | 💧 70% Humidity | 💨 14 km/h S</p></div>
-  <div class="weather-box"><h2>📍 Kerala</h2><p>🌧️ Heavy rain expected | 🌡️ 26°C/22°C | 💧 92% Humidity | 💨 12 km/h W</p></div>
-  <div class="weather-box"><h2>📍 Punjab</h2><p>🌞 Mostly sunny | 🌡️ 37°C/25°C | 💧 55% Humidity | 💨 16 km/h N</p></div>
-  <div class="weather-box"><h2>📍 Uttar Pradesh</h2><p>⛅ Cloudy with thunder possible | 🌡️ 34°C/26°C | 💧 67% Humidity | 💨 18 km/h NE</p></div>
-
-  <p style="text-align:center; font-size:0.9em; margin-top:30px; color:#888;">
-    Note: This weather data is static and meant for design demo. Live auto-updates will be added after AdSense approval.
-  </p>
+  <header>
+    <h1>☀️ Weather Report - Buldhana & Nearby</h1>
+    <p>Updated manually — layout with columns</p>
+  </header>
+  <div class="weather-container">
+    <div class="grid">
+      <div class="weather-card">
+        <div class="city">📍 Buldhana</div>
+        <div>🌡️ 34°C</div>
+        <div>☀️ Sunny</div>
+        <div>💧 58% Humidity</div>
+        <div>🌬️ 13 km/h Wind</div>
+      </div>
+      <div class="weather-card">
+        <div class="city">📍 Chikhli</div>
+        <div>🌡️ 33°C</div>
+        <div>☀️ Sunny</div>
+        <div>💧 60%</div>
+      </div>
+      <div class="weather-card">
+        <div class="city">📍 Mehkar</div>
+        <div>🌡️ 32°C</div>
+        <div>⛅ Partly Cloudy</div>
+        <div>💧 64%</div>
+      </div>
+      <div class="weather-card">
+        <div class="city">📍 Malkapur</div>
+        <div>🌡️ 31°C</div>
+        <div>🌤️ Clear</div>
+        <div>💧 55%</div>
+      </div>
+      <div class="weather-card">
+        <div class="city">📍 Shegaon</div>
+        <div>🌡️ 33°C</div>
+        <div>🌞 Sunny</div>
+        <div>💧 57%</div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
