@@ -3,92 +3,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Weather - InfoWorld</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Info</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       background: #e0f7fa;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-    header {
-      padding: 40px 20px 10px;
-    }
-    h1 {
-      font-size: 32px;
-      color: #00796b;
-    }
-    .weather-container {
-      background: white;
-      margin: 20px auto;
-      padding: 30px;
-      max-width: 900px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .weather-card {
-      background: #f0f8ff;
-      border-left: 4px solid #00796b;
+      font-family: 'Segoe UI', sans-serif;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .city {
-      font-size: 20px;
-      font-weight: bold;
-      color: #00796b;
-      margin-bottom: 8px;
+    .card {
+      background: #ffffff;
+      margin: 15px auto;
+      padding: 20px;
+      border-left: 6px solid #00897b;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+    h2 {
+      color: #00695c;
+    }
+    p {
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>☀️ Weather Report - Buldhana & Nearby</h1>
-    <p>Updated manually — layout with columns</p>
-  </header>
-  <div class="weather-container">
-    <div class="grid">
-      <div class="weather-card">
-        <div class="city">📍 Buldhana</div>
-        <div>🌡️ 34°C</div>
-        <div>☀️ Sunny</div>
-        <div>💧 58% Humidity</div>
-        <div>🌬️ 13 km/h Wind</div>
-      </div>
-      <div class="weather-card">
-        <div class="city">📍 Chikhli</div>
-        <div>🌡️ 33°C</div>
-        <div>☀️ Sunny</div>
-        <div>💧 60%</div>
-      </div>
-      <div class="weather-card">
-        <div class="city">📍 Mehkar</div>
-        <div>🌡️ 32°C</div>
-        <div>⛅ Partly Cloudy</div>
-        <div>💧 64%</div>
-      </div>
-      <div class="weather-card">
-        <div class="city">📍 Malkapur</div>
-        <div>🌡️ 31°C</div>
-        <div>🌤️ Clear</div>
-        <div>💧 55%</div>
-      </div>
-      <div class="weather-card">
-        <div class="city">📍 Shegaon</div>
-        <div>🌡️ 33°C</div>
-        <div>🌞 Sunny</div>
-        <div>💧 57%</div>
-      </div>
-    </div>
+  <h1 style="text-align:center;">🌤️ Weather Update - InfoWorld</h1>
+
+  <div class="card">
+    <h2>📍 Buldhana</h2>
+    <p>🌡️ 34°C</p>
+    <p>☀️ Sunny</p>
+    <p>💧 58% Humidity</p>
+    <p>🌬️ 13 km/h Wind</p>
   </div>
+
+  <div class="card">
+    <h2>📍 Chikhli</h2>
+    <p>🌡️ 33°C</p>
+    <p>☁️ Cloudy</p>
+    <p>💧 60% Humidity</p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Mehkar</h2>
+    <p>🌡️ 32°C</p>
+    <p>🌧️ Rainy</p>
+    <p>💧 64% Humidity</p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Malkapur</h2>
+    <p>🌡️ 31°C</p>
+    <p>☀️ Clear</p>
+    <p>💧 55% Humidity</p>
+  </div>
+
+  <div class="card">
+    <h2>📍 Shegaon</h2>
+    <p>🌡️ 33°C</p>
+    <p>☀️ Sunny</p>
+    <p>💧 52% Humidity</p>
+  </div>
+
 </body>
 </html>
