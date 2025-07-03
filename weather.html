@@ -3,69 +3,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather - InfoWorld</title>
   <style>
     body {
-      background: #e0f7fa;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: Arial, sans-serif;
+      background-color: #e6f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #b3f0ff;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 20px;
     }
     .card {
-      background: #ffffff;
-      margin: 15px auto;
-      padding: 20px;
-      border-left: 6px solid #00897b;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      max-width: 500px;
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      padding: 30px;
+      width: 300px;
+      text-align: center;
+      font-size: 1.3rem;
+      line-height: 2rem;
     }
-    h2 {
-      color: #00695c;
-    }
-    p {
-      margin: 5px 0;
+    .location {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #007b7f;
     }
   </style>
 </head>
 <body>
-  <h1 style="text-align:center;">🌤️ Weather Update - InfoWorld</h1>
-
-  <div class="card">
-    <h2>📍 Buldhana</h2>
-    <p>🌡️ 34°C</p>
-    <p>☀️ Sunny</p>
-    <p>💧 58% Humidity</p>
-    <p>🌬️ 13 km/h Wind</p>
+  <h1>🌤️ Today's Weather - InfoWorld</h1>
+  <div class="container">
+    <div class="card">
+      <div class="location">📍 Buldhana</div>
+      🌡️ 34°C<br>☀️ Sunny<br>💧 58% Humidity<br>💨 13 km/h Wind
+    </div>
+    <div class="card">
+      <div class="location">📍 Chikhli</div>
+      🌡️ 33°C<br>☁️ Cloudy<br>💧 60% Humidity
+    </div>
+    <div class="card">
+      <div class="location">📍 Mehkar</div>
+      🌡️ 32°C<br>🌧️ Rainy<br>💧 64% Humidity
+    </div>
+    <div class="card">
+      <div class="location">📍 Malkapur</div>
+      🌡️ 31°C<br>☀️ Sunny<br>💧 55% Humidity
+    </div>
+    <div class="card">
+      <div class="location">📍 Deulgaon Raja</div>
+      🌡️ 32°C<br>🌥️ Partly Cloudy<br>💧 59% Humidity
+    </div>
+    <div class="card">
+      <div class="location">📍 Lonar</div>
+      🌡️ 33°C<br>⛅ Partly Cloudy<br>💧 61% Humidity
+    </div>
+    <div class="card">
+      <div class="location">📍 Jalgaon Jamod</div>
+      🌡️ 34°C<br>☀️ Sunny<br>💧 57% Humidity
+    </div>
+    <div class="card">
+      <div class="location">📍 Sindkhed Raja</div>
+      🌡️ 31°C<br>🌦️ Scattered Showers<br>💧 62% Humidity
+    </div>
+    <div class="card">
+      <div class="location">📍 Khamgaon</div>
+      🌡️ 32°C<br>⛅ Cloudy<br>💧 63% Humidity
+    </div>
+    <div class="card">
+      <div class="location">📍 Motala</div>
+      🌡️ 30°C<br>🌧️ Rainy<br>💧 65% Humidity
+    </div>
   </div>
-
-  <div class="card">
-    <h2>📍 Chikhli</h2>
-    <p>🌡️ 33°C</p>
-    <p>☁️ Cloudy</p>
-    <p>💧 60% Humidity</p>
-  </div>
-
-  <div class="card">
-    <h2>📍 Mehkar</h2>
-    <p>🌡️ 32°C</p>
-    <p>🌧️ Rainy</p>
-    <p>💧 64% Humidity</p>
-  </div>
-
-  <div class="card">
-    <h2>📍 Malkapur</h2>
-    <p>🌡️ 31°C</p>
-    <p>☀️ Clear</p>
-    <p>💧 55% Humidity</p>
-  </div>
-
-  <div class="card">
-    <h2>📍 Shegaon</h2>
-    <p>🌡️ 33°C</p>
-    <p>☀️ Sunny</p>
-    <p>💧 52% Humidity</p>
-  </div>
-
 </body>
 </html>
