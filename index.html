@@ -1,96 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>InfoWorld</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e0f7ff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        nav {
-            background: white;
-            padding: 10px;
-        }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-        h1 {
-            font-size: 2em;
-            padding: 20px;
-        }
-        .button {
-            display: block;
-            width: 80%;
-            margin: 10px auto;
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            background: #fff;
-            font-size: 1em;
-            text-decoration: none;
-            color: #333;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .store-box {
-            background-color: #f3e8ff;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 85%;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .store-box h2 {
-            color: #7a42f4;
-        }
-        .footer {
-            margin-top: 30px;
-            font-size: 0.8em;
-            color: #666;
-        }
-        .footer a {
-            color: #007bff;
-            margin: 0 5px;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InfoWorld</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e3f4ff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    nav {
+      background-color: white;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #007bff;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+    .button {
+      display: block;
+      width: 80%;
+      max-width: 300px;
+      margin: 15px auto;
+      padding: 12px;
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .store-box {
+      background: #ede4ff;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 400px;
+      border-left: 6px solid #a084e8;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .store-box h2 {
+      color: #7c3aed;
+      margin-bottom: 10px;
+    }
+    .store-box p {
+      margin: 0 0 15px;
+      color: #333;
+    }
+    .store-box a {
+      background-color: #a084e8;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    footer {
+      font-size: 12px;
+      padding: 20px;
+      color: #555;
+    }
+    footer a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 5px;
+    }
+  </style>
+
+  <!-- Google AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-ADSENSE-ID" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
-        <a href="#">Home</a>
-        <a href="/blog">Blog</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/privacy">Privacy</a>
-    </nav>
 
-    <h1>🌍 Welcome to InfoWorld</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
 
-    <a class="button" href="/news">📰 Go to News</a>
-    <a class="button" href="/blog">📚 Go to Blog</a>
-    <a class="button" href="https://app.quizpanda.fun/invite/user/201f49e4">💰 Go to Refer & Earn</a>
-    <a class="button" href="/weather">🌞 Go to Weather</a>
+  <h1>🌍 Welcome to InfoWorld</h1>
 
-    <div class="store-box">
-        <h2>🛍️ SMARTNESTINDIA</h2>
-        <p>Smart Shopping for Smart People</p>
-        <a class="button" href="https://mydukaan.io/smartnestindia" style="background-color:#a78bfa; color:white;">Visit My Store</a>
-    </div>
+  <a href="news.html" class="button">📰 Go to News</a>
+  <a href="blog.html" class="button">📚 Go to Blog</a>
+  <a href="https://app.quizpanda.fun/invite/user/201f49e4" class="button">💰 Go to Refer & Earn</a>
+  <a href="weather.html" class="button">🌞 Go to Weather</a>
 
-    <div class="footer">
-        <a href="/about">About Us</a> |
-        <a href="/terms">Terms & Conditions</a> |
-        <a href="/disclaimer">Disclaimer</a> |
-        <a href="/privacy">Privacy</a> |
-        <a href="/contact">Contact</a>
-        <p>Designed by Chetan Patil • © 2025 InfoWorld</p>
-    </div>
+  <div class="store-box">
+    <h2>🛍️ SMARTNESTINDIA</h2>
+    <p>Smart Shopping for Smart People</p>
+    <a href="https://mydukaan.io/smartnestindia" target="_blank">Visit My Store</a>
+  </div>
+
+  <footer>
+    <a href="about.html">About Us</a> |
+    <a href="terms.html">Terms & Conditions</a> |
+    <a href="disclaimer.html">Disclaimer</a> |
+    <a href="privacy.html">Privacy</a> |
+    <a href="contact.html">Contact</a><br><br>
+    Designed by Chetan Patil • © 2025 InfoWorld
+  </footer>
+
 </body>
 </html>
