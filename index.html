@@ -1,119 +1,103 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>InfoWorld</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #e3f4ff;
+      background-color: #e6f4f9;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
-    nav {
+    header, footer {
       background-color: white;
-      padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
     }
     nav a {
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
-      font-weight: bold;
       color: #007bff;
+      font-weight: bold;
     }
-    h1 {
-      margin-top: 20px;
+    main {
+      text-align: center;
+      padding: 20px;
     }
     .button {
       display: block;
       width: 80%;
       max-width: 300px;
-      margin: 15px auto;
-      padding: 12px;
-      background-color: #fff;
+      margin: 10px auto;
+      padding: 15px;
+      background-color: white;
       border: 2px solid #ccc;
       border-radius: 10px;
       font-size: 18px;
-      text-decoration: none;
       color: #333;
+      text-decoration: none;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .store-box {
-      background: #ede4ff;
+      background-color: #f2eaff;
       margin: 30px auto;
       padding: 20px;
-      border-radius: 20px;
+      border-radius: 10px;
       width: 90%;
-      max-width: 400px;
-      border-left: 6px solid #a084e8;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 320px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .store-box h2 {
-      color: #7c3aed;
-      margin-bottom: 10px;
+      color: #7d33ff;
     }
     .store-box p {
-      margin: 0 0 15px;
-      color: #333;
-    }
-    .store-box a {
-      background-color: #a084e8;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      display: inline-block;
-    }
-    footer {
-      font-size: 12px;
-      padding: 20px;
       color: #555;
     }
-    footer a {
+    .store-box a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #9f84f9;
+      color: white;
       text-decoration: none;
-      color: #333;
-      margin: 0 5px;
+      border-radius: 6px;
+    }
+    footer p {
+      margin: 5px;
+      font-size: 12px;
     }
   </style>
-
-  <!-- Google AdSense Auto Ads -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR-ADSENSE-ID" crossorigin="anonymous"></script>
 </head>
 <body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Welcome to InfoWorld</h1>
+    <a href="news.html" class="button">Go to News</a>
+    <a href="blog.html" class="button">Go to Blog</a>
+    <a href="refer.html" class="button">Go to Refer & Earn</a>
+    <a href="weather.html" class="button">Go to Weather</a>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy.html">Privacy</a>
-  </nav>
-
-  <h1>🌍 Welcome to InfoWorld</h1>
-
-  <a href="news.html" class="button">📰 Go to News</a>
-  <a href="blog.html" class="button">📚 Go to Blog</a>
-  <a href="https://app.quizpanda.fun/invite/user/201f49e4" class="button">💰 Go to Refer & Earn</a>
-  <a href="weather.html" class="button">🌞 Go to Weather</a>
-
-  <div class="store-box">
-    <h2>🛍️ SMARTNESTINDIA</h2>
-    <p>Smart Shopping for Smart People</p>
-    <a href="https://mydukaan.io/smartnestindia" target="_blank">Visit My Store</a>
-  </div>
-
+    <div class="store-box">
+      <h2>SMARTNESTINDIA</h2>
+      <p>Smart Shopping for Smart People</p>
+      <a href="https://mydukaan.io/smartnestindia" target="_blank">Visit My Store</a>
+    </div>
+  </main>
   <footer>
-    <a href="about.html">About Us</a> |
-    <a href="terms.html">Terms & Conditions</a> |
-    <a href="disclaimer.html">Disclaimer</a> |
-    <a href="privacy.html">Privacy</a> |
-    <a href="contact.html">Contact</a><br><br>
-    Designed by Chetan Patil • © 2025 InfoWorld
+    <p><a href="about.html">About Us</a> | <a href="terms.html">Terms & Conditions</a> | <a href="disclaimer.html">Disclaimer</a> | <a href="privacy.html">Privacy</a> | <a href="contact.html">Contact</a></p>
+    <p>Designed by Chetan Patil • © 2025 InfoWorld</p>
   </footer>
-
 </body>
 </html>
