@@ -2,128 +2,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>InfoWorld Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f0f8ff;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: center;
-      padding: 40px 20px 20px;
-    }
-    h1 {
-      font-size: 32px;
-      color: #0077cc;
-    }
-    .blog-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-    }
-    .card {
-      position: relative;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin: 15px;
-      width: 300px;
-      padding: 20px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-align: left;
-      overflow: hidden;
-    }
-    .card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, #b3e5fc 0%, transparent 70%);
-      opacity: 0.25;
-      z-index: 0;
-    }
-    .card * {
-      position: relative;
-      z-index: 1;
-    }
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      margin: 15px;
-      width: 300px;
-      padding: 20px;
-      transition: transform 0.3s;
-      text-align: left;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #0077cc;
-    }
-    .card p {
-      font-size: 15px;
-      color: #444;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 10px;
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: bold;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>InfoWorld - Blog</title>
+  
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  header, footer {
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+  }
+  main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  h1, h2 {
+    color: #222;
+  }
+  .card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+
 </head>
 <body>
-  <header>
-    <h1>📚 Welcome to the InfoWorld Blog</h1>
-    <p>Read helpful guides, tips, and tech insights curated for smart minds like yours.</p>
-  </header>
-  <div class="blog-container">
+<header>
+  <h1>Our Blog</h1>
+</header>
+<main>
+  
     <div class="card">
-      <h3>Top 5 Budget Apps for Students</h3>
-      <p>Discover must-have budgeting apps to save more and manage your student expenses.</p>
-      <a href="post1.html">Read more →</a>
+      <h2>Blog Post Title 1</h2>
+      <p>This post explores useful tips and insights related to digital life, apps, or tools.</p>
+      <a href="blog-post-1.html" class="read-more">Read more</a>
     </div>
+    
     <div class="card">
-      <h3>Earn from Referrals in India</h3>
-      <p>Learn how to make passive income through popular Indian referral programs.</p>
-      <a href="post2.html">Read more →</a>
+      <h2>Blog Post Title 2</h2>
+      <p>This post explores useful tips and insights related to digital life, apps, or tools.</p>
+      <a href="blog-post-2.html" class="read-more">Read more</a>
     </div>
+    
     <div class="card">
-      <h3>Best Productivity Apps in 2025</h3>
-      <p>Boost your focus and workflow with these top productivity tools for mobile and web.</p>
-      <a href="post3.html">Read more →</a>
+      <h2>Blog Post Title 3</h2>
+      <p>This post explores useful tips and insights related to digital life, apps, or tools.</p>
+      <a href="blog-post-3.html" class="read-more">Read more</a>
     </div>
+    
     <div class="card">
-      <h3>Build an Online Business</h3>
-      <p>Start your online journey with these practical tips for beginners in 2025.</p>
-      <a href="post4.html">Read more →</a>
+      <h2>Blog Post Title 4</h2>
+      <p>This post explores useful tips and insights related to digital life, apps, or tools.</p>
+      <a href="blog-post-4.html" class="read-more">Read more</a>
     </div>
+    
     <div class="card">
-      <h3>Get Google AdSense Approval</h3>
-      <p>Follow these proven steps to get approved by AdSense and start earning.</p>
-      <a href="post5.html">Read more →</a>
+      <h2>Blog Post Title 5</h2>
+      <p>This post explores useful tips and insights related to digital life, apps, or tools.</p>
+      <a href="blog-post-5.html" class="read-more">Read more</a>
     </div>
+    
     <div class="card">
-      <h3>Top Affiliate Platforms in India</h3>
-      <p>Explore the best affiliate networks to monetize your blog or site in 2025.</p>
-      <a href="post6.html">Read more →</a>
+      <h2>Blog Post Title 6</h2>
+      <p>This post explores useful tips and insights related to digital life, apps, or tools.</p>
+      <a href="blog-post-6.html" class="read-more">Read more</a>
     </div>
+    
     <div class="card">
-      <h3>Free Tools for Students & Creators</h3>
-      <p>Check out powerful free tools for notes, graphics, productivity, and more.</p>
-      <a href="post7.html">Read more →</a>
+      <h2>Blog Post Title 7</h2>
+      <p>This post explores useful tips and insights related to digital life, apps, or tools.</p>
+      <a href="blog-post-7.html" class="read-more">Read more</a>
     </div>
-  </div>
+    
+    <div class="card">
+      <h2>Blog Post Title 8</h2>
+      <p>This post explores useful tips and insights related to digital life, apps, or tools.</p>
+      <a href="blog-post-8.html" class="read-more">Read more</a>
+    </div>
+    
+    <div class="card">
+      <h2>Blog Post Title 9</h2>
+      <p>This post explores useful tips and insights related to digital life, apps, or tools.</p>
+      <a href="blog-post-9.html" class="read-more">Read more</a>
+    </div>
+    
+    <div class="card">
+      <h2>Blog Post Title 10</h2>
+      <p>This post explores useful tips and insights related to digital life, apps, or tools.</p>
+      <a href="blog-post-10.html" class="read-more">Read more</a>
+    </div>
+    
+</main>
+<footer>
+  <p>© 2025 InfoWorld</p>
+</footer>
 </body>
 </html>
